@@ -29,7 +29,7 @@ all: $(objects)
 		nvcc -arch=sm_80 $(objects) -o app
 
 %.o: %.cpp
-		nvcc -x cu -arch=sm_20 -I. -dc $< -o $@
+		nvcc -x cu -arch=sm_80 -I. -dc $< -o $@
 
 clean:
 		rm -f *.o app
